@@ -1,9 +1,17 @@
 const schedule = require("node-schedule");
 
-let date = new Date("2023-03-05T13:41:00.867Z");
-const setDateSchedule = schedule.scheduleJob(date, () => {
-  console.log("Done on ", new Date().toDateString());
-}); // runing this function at a paricular time which is on line 5
+// let date = new Date("2023-03-05T13:41:00.867Z");
+// const setDateSchedule = schedule.scheduleJob(date, () => {
+//   console.log("Done on ", new Date().toDateString());
+// }); // runing this function at a paricular time which is on line 5
+
+const doThisInThisTime = new Date();
+
+
+// const job = schedule.scheduleJob("* * * * * sun", function () {
+//   console.log("The answer to life, the universe, and everything!");
+//   const schedule = require("node-schedule");
+// });
 
 // *    *    *    *    *    *
 // ┬    ┬    ┬    ┬    ┬    ┬
