@@ -1,10 +1,5 @@
 const schedule = require("node-schedule");
 
-// let date = new Date("2023-03-05T13:41:00.867Z");
-// const setDateSchedule = schedule.scheduleJob(date, () => {
-//   console.log("Done on ", new Date().toDateString());
-// }); // runing this function at a paricular time which is on line 5
-
 const doThisInThisTime = new Date("2023-03-05T14:24:00.273Z");
 // console.log(doThisInThisTime);
 
@@ -37,12 +32,3 @@ const start_Cancel = schedule.scheduleJob(`*/2 * * * * *`, function () {
 // │    │    └─────────────── hour (0 - 23)
 // │    └──────────────────── minute (0 - 59)
 // └───────────────────────── second (0 - 59, OPTIONAL)
-
-const rule = new schedule.RecurrenceRule();
-rule.dayOfWeek = [3, new schedule.Range(4, 6)];
-
-rule.hour = 16;
-rule.minute = 9;
-const check = schedule.scheduleJob(rule, function () {
-  //   console.log("Today is recognized by Rebecca Black!");
-});
