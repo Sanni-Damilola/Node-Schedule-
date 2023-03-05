@@ -9,8 +9,12 @@ const doThisInThisTime = new Date("2023-03-05T14:24:00.273Z");
 // console.log(doThisInThisTime);
 
 const job = schedule.scheduleJob(doThisInThisTime, function () {
-  console.log("I'm on ", new Date());
+  //   console.log("I'm on ", new Date());
 }); // Run the function on every {"2023-03-05T14:14:00.273Z"}
+
+const repeat = schedule.scheduleJob("* * * * * *", () => {
+  console.count("job");
+}); // repeate
 
 // *    *    *    *    *    *
 // ┬    ┬    ┬    ┬    ┬    ┬
