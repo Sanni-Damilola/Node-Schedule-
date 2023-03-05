@@ -1,2 +1,16 @@
 const schedule = require("node-schedule");
-console.log("here", schedule);
+
+let date = new Date("2023-03-05T13:41:00.867Z");
+const setDateSchedule = schedule.scheduleJob(date, () => {
+  console.log("Done on ", new Date().toDateString());
+}); // runing this function at a paricular time which is on line 5
+
+// *    *    *    *    *    *
+// ┬    ┬    ┬    ┬    ┬    ┬
+// │    │    │    │    │    │
+// │    │    │    │    │    └ day of week (0 - 7) (0 or 7 is Sun)
+// │    │    │    │    └───── month (1 - 12)
+// │    │    │    └────────── day of month (1 - 31)
+// │    │    └─────────────── hour (0 - 23)
+// │    └──────────────────── minute (0 - 59)
+// └───────────────────────── second (0 - 59, OPTIONAL)
