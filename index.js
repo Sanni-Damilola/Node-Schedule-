@@ -17,6 +17,9 @@ const repeat = schedule.scheduleJob(`* * * * * ${repeteCurrentDay}`, () => {
   //   console.count("on");
 }); // repeate
 
+
+
+
 // *    *    *    *    *    *
 // ┬    ┬    ┬    ┬    ┬    ┬
 // │    │    │    │    │    │
@@ -26,3 +29,4 @@ const repeat = schedule.scheduleJob(`* * * * * ${repeteCurrentDay}`, () => {
 // │    │    └─────────────── hour (0 - 23)
 // │    └──────────────────── minute (0 - 59)
 // └───────────────────────── second (0 - 59, OPTIONAL)
+
