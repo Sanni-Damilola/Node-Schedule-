@@ -4,7 +4,7 @@ const rule = new schedule.RecurrenceRule();
 
 rule.dayOfWeek = [0, new schedule.Range(4, 6)];
 rule.hour = 18;
-rule.minute = 20;
+rule.minute = 36;
 
 const setRule = schedule.scheduleJob(rule, () => {
   console.log("Happy Birthay Tolu");
