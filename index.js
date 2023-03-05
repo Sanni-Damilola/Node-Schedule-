@@ -26,7 +26,7 @@ const start_Cancel = schedule.scheduleJob(`*/2 * * * * *`, function () {
   if (start === cancel) {
     start_Cancel.cancel();
   }
-}); // cancel
+}); // cancel when condition as been meet
 
 // *    *    *    *    *    *
 // ┬    ┬    ┬    ┬    ┬    ┬
@@ -37,3 +37,6 @@ const start_Cancel = schedule.scheduleJob(`*/2 * * * * *`, function () {
 // │    │    └─────────────── hour (0 - 23)
 // │    └──────────────────── minute (0 - 59)
 // └───────────────────────── second (0 - 59, OPTIONAL)
+
+
+sc
