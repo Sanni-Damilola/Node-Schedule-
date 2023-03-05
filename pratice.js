@@ -1,3 +1,4 @@
-const schedule = require("node:assert");
+const schedule = require("node-schedule");
 
-console.log(schedule);
+const rule = new schedule.RecurrenceRule();
+console.log(rule);
