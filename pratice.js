@@ -2,10 +2,13 @@ const schedule = require("node-schedule");
 
 const rule = new schedule.RecurrenceRule();
 
-rule.hour = 18
-rule.minute = 20
+rule.dayOfWeek = [0, new schedule.Range(4, 6)];
+rule.hour = 18;
+rule.minute = 20;
 
-
+const setRule = schedule.scheduleJob(rule, () => {
+  console.log("Happy Birthay Tolu");
+});
 
 // const rule = new schedule.RecurrenceRule();
 // rule.minute = 42;
