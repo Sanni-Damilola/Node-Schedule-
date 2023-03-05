@@ -5,7 +5,7 @@ const schedule = require("node-schedule");
 //   console.log("Done on ", new Date().toDateString());
 // }); // runing this function at a paricular time which is on line 5
 
-const doThisInThisTime = new Date("2023-03-05T14:14:00.273Z");
+const doThisInThisTime = new Date("2023-03-05T14:24:00.273Z");
 // console.log(doThisInThisTime);
 
 const job = schedule.scheduleJob(doThisInThisTime, function () {
