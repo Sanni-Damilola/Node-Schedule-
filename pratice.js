@@ -7,12 +7,12 @@ rule.hour = 18;
 rule.minute = 36;
 
 const setRule = schedule.scheduleJob(rule, () => {
-  console.log("Happy Birthay Tolu");
+//   console.log("Happy Birthay Tolu");
 });
 
-// const rule = new schedule.RecurrenceRule();
-// rule.minute = 42;
+const rule1 = new schedule.RecurrenceRule();
+rule1.minute = 39;
 
-// const job = schedule.scheduleJob(rule, function () {
-//   console.log("The answer to life, the universe, and everything!");
-// });
+const job = schedule.scheduleJob(rule1, function () {
+  console.log("The answer to life, the universe, and everything!");
+});
