@@ -9,9 +9,8 @@ const doThisInThisTime = new Date("2023-03-05T14:14:00.273Z");
 // console.log(doThisInThisTime);
 
 const job = schedule.scheduleJob(doThisInThisTime, function () {
-  console.log("The answer to life, the universe, and everything!");
-  const schedule = require("node-schedule");
-});
+  console.log("I'm on ", new Date());
+}); // Run the function on every {"2023-03-05T14:14:00.273Z"}
 
 // *    *    *    *    *    *
 // ┬    ┬    ┬    ┬    ┬    ┬
