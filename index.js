@@ -5,13 +5,13 @@ const schedule = require("node-schedule");
 //   console.log("Done on ", new Date().toDateString());
 // }); // runing this function at a paricular time which is on line 5
 
-const doThisInThisTime = new Date();
+const doThisInThisTime = new Date("2023-03-05T14:14:00.273Z");
+// console.log(doThisInThisTime);
 
-
-// const job = schedule.scheduleJob("* * * * * sun", function () {
-//   console.log("The answer to life, the universe, and everything!");
-//   const schedule = require("node-schedule");
-// });
+const job = schedule.scheduleJob(doThisInThisTime, function () {
+  console.log("The answer to life, the universe, and everything!");
+  const schedule = require("node-schedule");
+});
 
 // *    *    *    *    *    *
 // ┬    ┬    ┬    ┬    ┬    ┬
