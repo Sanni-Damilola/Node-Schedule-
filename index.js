@@ -21,7 +21,7 @@ let start = 0;
 let cancel = 5;
 
 const start_Cancel = schedule.scheduleJob(`*/2 * * * * *`, function () {
-//   console.count();
+  //   console.count();
   start++;
   if (start === cancel) {
     start_Cancel.cancel();
@@ -38,5 +38,11 @@ const start_Cancel = schedule.scheduleJob(`*/2 * * * * *`, function () {
 // │    └──────────────────── minute (0 - 59)
 // └───────────────────────── second (0 - 59, OPTIONAL)
 
+const rule = new schedule.RecurrenceRule();
+rule.dayOfWeek = [1, new schedule.Range(4, 6)];
 
-// schedule.Invocation()
+rule.hour = 16;
+rule.minute = 1;
+const check = schedule.scheduleJob(rule, function () {
+  //   console.log("Today is recognized by Rebecca Black!");
+});
