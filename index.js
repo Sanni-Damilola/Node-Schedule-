@@ -21,7 +21,7 @@ let start = 0;
 let cancel = 5;
 
 const start_Cancel = schedule.scheduleJob(`*/2 * * * * *`, function () {
-  console.count();
+//   console.count();
   start++;
   if (start === cancel) {
     start_Cancel.cancel();
