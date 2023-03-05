@@ -1,18 +1,28 @@
 const schedule = require("node-schedule");
+// console.log(schedule);
 
-const rule = new schedule.RecurrenceRule();
+// scheduleJob
+// cancelJob
+// RecurrenceRule
+// Range
 
-rule.dayOfWeek = [0, new schedule.Range(4, 6)];
-rule.hour = 18;
-rule.minute = 36;
+const date = new Date("2023-03-05T20:13:00.166Z");
+// console.log(date);
 
-const setRule = schedule.scheduleJob(rule, () => {
-//   console.log("Happy Birthay Tolu");
+const job = schedule.scheduleJob("any", "* * * * * sun", () => {
+  console.log("Hello, This is the Time", new Date());
+  schedule.cancelJob("any");
 });
 
-const rule1 = new schedule.RecurrenceRule();
-rule1.minute = 39;
 
-const job = schedule.scheduleJob(rule1, function () {
-  console.log("The answer to life, the universe, and everything!");
-});
+// const 
+
+// *    *    *    *    *    *
+// ┬    ┬    ┬    ┬    ┬    ┬
+// │    │    │    │    │    │
+// │    │    │    │    │    └ day of week (0 - 7) (0 or 7 is Sun)
+// │    │    │    │    └───── month (1 - 12)
+// │    │    │    └────────── day of month (1 - 31)
+// │    │    └─────────────── hour (0 - 23)
+// │    └──────────────────── minute (0 - 59)
+// └───────────────────────── second (0 - 59, OPTIONAL)
