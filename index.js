@@ -12,8 +12,9 @@ const job = schedule.scheduleJob(doThisInThisTime, function () {
   //   console.log("I'm on ", new Date());
 }); // Run the function on every {"2023-03-05T14:14:00.273Z"}
 
+let repeteCurrentDay = new Date().getDay();
 const repeat = schedule.scheduleJob("* * * * * *", () => {
-  console.count("job");
+  //   console.count("job");
 }); // repeate
 
 // *    *    *    *    *    *
