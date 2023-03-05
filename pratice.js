@@ -5,8 +5,9 @@ let start = 1;
 
 let end = 365;
 
-const schedule = file.scheduleJob("done", "* * 24 * * *", () => {
+const schedule = file.scheduleJob("* * * * * *", () => {
   console.log("this");
+  schedule.cancel();
 });
 
 // *    *    *    *    *    *
