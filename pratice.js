@@ -2,10 +2,7 @@
 const node_schedule = require("node-schedule")
 
 
-const check = node_schedule.scheduleJob("* * * * * *", () => {
-  console.log("Done");
-})
-
+const check = node_schedule
 
 
 // *    *    *    *    *    *
