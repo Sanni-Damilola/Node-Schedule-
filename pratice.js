@@ -9,11 +9,12 @@ const check = node_schedule.scheduleJob("0 * * * * *", () => {
 
 const recurrenceRule = new node_schedule.RecurrenceRule()
 let range = new node_schedule.Range()
-console.log("RecurrenceRule", recurrenceRule);
-console.log("range", range);
+// console.log("RecurrenceRule", recurrenceRule);
+// console.log("range", range);
 
-console.log("");
 recurrenceRule.dayOfWeek = [0, new node_schedule.Range(4, 6)]
+recurrenceRule.hour = 8
+recurrenceRule.minute = 59
 
 
 
