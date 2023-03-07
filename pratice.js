@@ -8,7 +8,7 @@ const check = node_schedule.scheduleJob("0 * * * * *", () => {
 
 
 const reduce = new node_schedule.RecurrenceRule()
-console.log(reduce.dayOfWeek);
+
 
 
 
