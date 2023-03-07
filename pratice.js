@@ -2,7 +2,7 @@
 const node_schedule = require("node-schedule")
 
 
-const check = node_schedule.scheduleJob("0 * * * * *", () => {
+const check = node_schedule.scheduleJob("* 10 21 * * tue", () => {
   // console.log("Done on", new Date().getSeconds());
 })
 
@@ -17,7 +17,7 @@ recurrenceRule.hour = 21
 recurrenceRule.minute = 7
 
 const seeRange = node_schedule.scheduleJob( recurrenceRule,() => {
-console.log("yo");
+// console.log("yo");
 })
 
 
