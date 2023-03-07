@@ -2,7 +2,12 @@
 const node_schedule = require("node-schedule")
 
 
-const check = node_schedule
+const check = node_schedule.scheduleJob("0 * * * * *", () => {
+  console.log("Done on", new Date().getSeconds());
+})
+
+
+const reduce = new node_schedule.RecurrenceRule()
 
 
 // *    *    *    *    *    *
